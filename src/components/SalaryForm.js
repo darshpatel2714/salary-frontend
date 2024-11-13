@@ -50,7 +50,7 @@ const SalaryForm = () => {
         const totalSalary = totalAmount - pf;
 
         try {
-            const response = await axios.post('https://salary-backend-kexq.onrender.com//api/salary', {
+            const response = await axios.post('https://salary-backend-kexq.onrender.com/api/salary', {
                 ...salaryData,
                 regularHoursAmount,
                 overtimeHoursAmount: overtimeAmount,
