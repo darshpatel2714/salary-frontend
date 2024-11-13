@@ -25,7 +25,8 @@ const SalaryForm = () => {
     useEffect(() => {
         const fetchSalaryData = async () => {
             try {
-                const response = await axios.get(`https://salary-backend-kexq.onrender.com/api/salary/${selectedYear}/${selectedMonth}`);
+                const response = await axios.get(`mongodb+srv://pateldarsh456:darsh2712004@salary.sqe3h.mongodb.net/?retryWrites=true&w=majority&appName=Salary
+/api/salary/${selectedYear}/${selectedMonth}`);
                 setSalaryTableData(response.data);
             } catch (error) {
                 console.error("Error fetching salary data:", error);
@@ -50,7 +51,8 @@ const SalaryForm = () => {
         const totalSalary = totalAmount - pf;
 
         try {
-            const response = await axios.post('https://salary-backend-kexq.onrender.com/api/salary', {
+            const response = await axios.post('mongodb+srv://pateldarsh456:darsh2712004@salary.sqe3h.mongodb.net/?retryWrites=true&w=majority&appName=Salary
+/api/salary', {
                 ...salaryData,
                 regularHoursAmount,
                 overtimeHoursAmount: overtimeAmount,
